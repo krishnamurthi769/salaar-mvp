@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #000000;
+    --foreground: #FFFFFF;
+    
+    --card: #0A0A0A;
+    --card-foreground: #FFFFFF;
+    
+    --popover: #0A0A0A;
+    --popover-foreground: #FFFFFF;
+    
+    --primary: #FFFFFF;
+    --primary-foreground: #000000;
+    
+    --secondary: #0A0A0A;
+    --secondary-foreground: #FFFFFF;
+    
+    --muted: #141414;
+    --muted-foreground: #A0A0A0;
+    
+    --accent: #141414;
+    --accent-foreground: #FFFFFF;
+    
+    --destructive: #FF4444;
+    --destructive-foreground: #FFFFFF;
+
+    --border: #222222;
+    --input: #222222;
+    --ring: #444444;
+
+    --radius: 0;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-black text-white font-sans;
+    font-weight: 400;
+    line-height: 1.7;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+}
+
+/* Base custom styles per request */
+@layer components {
+  /* No gradients, no shadows, no blur effects */
+  * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+    backdrop-filter: none !important;
+  }
+
+  .btn-primary {
+    @apply bg-white text-black hover:bg-gray-100 px-4 py-2 cursor-pointer transition-colors duration-150 inline-flex items-center justify-center font-medium;
+  }
+
+  .btn-secondary {
+    @apply bg-transparent border border-[#333333] text-white hover:border-[#555555] px-4 py-2 cursor-pointer transition-colors duration-150 inline-flex items-center justify-center font-medium;
+  }
+
+  .card-styled {
+    @apply bg-[#0A0A0A] border border-[#1E1E1E] p-6;
+  }
+
+  .input-styled {
+    @apply bg-[#0A0A0A] border border-[#222222] focus:border-white focus:outline-none px-3 py-2 text-white placeholder-[#555555] transition-colors duration-150 w-full;
+  }
+}
