@@ -1,0 +1,39 @@
+{
+  "name": "salaar_mvp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev:frontend": "cd frontend && npm run dev",
+    "dev:core": "cd services/core-api && npx ts-node src/index.ts",
+    "dev:chat": "cd services/chat-service && npx ts-node src/index.ts",
+    "dev:agent": "cd services/agent-service && npx ts-node src/index.ts",
+    "dev:memory": "cd services/memory-service && npx ts-node src/index.ts",
+    "dev:research": "cd services/research-service && npx ts-node src/index.ts",
+    "dev:workspace": "cd services/workspace-service && npx ts-node src/index.ts",
+    "dev": "concurrently \"npm:dev:*\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "axios": "^1.13.6",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "jsonwebtoken": "^9.0.3",
+    "pg": "^8.20.0",
+    "redis": "^5.11.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.5.0",
+    "@types/pg": "^8.18.0",
+    "concurrently": "^9.2.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.3"
+  }
+}
